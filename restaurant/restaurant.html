@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vienna Bistro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-restaurant/header.css">
+    <link rel="stylesheet" href="styles-restaurant/main.css">
+    <link rel="stylesheet" href="styles-restaurant/general.css">
+    <link rel="stylesheet" href="styles-restaurant/footer.css">
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo-container">
+          <img class="logo" src="restaurant-pictures/vienna-logo.png" alt="Vienna Bistro Logo">
+          <h1>Vienna Bistro</h1>
+        </div>
+        <nav class="navigation">
+          <a class="nav-item" href="#home">Home</a>
+          <a class="nav-item" href="#menu">Menu</a>
+          <a class="nav-item" href="#about">About</a>
+          <a class="nav-item" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="home" class="hero-section">
+        <img class="food-image" src="restaurant-pictures/vienna-food-2.jpg" alt="Delicious Vienna Dish">
+        <div class="hero-text">
+          <h2>Welcome to Vienna Bistro</h2>
+          <p>Experience the authentic taste of Vienna in every bite.</p>
+        </div>
+      </div>
+
+      <section id="menu" class="menu-area">
+        <h2 class="menu-heading">Popular Dishes</h2>
+        <div class="menu-section">
+          <div class="menu-item-card">
+            <div class="menu-item-image-container">
+              <img class="menu-item-image" src="restaurant-pictures/indian-fish-chips.jpg" alt="Indian Fish and Chips">
+            </div>
+            <div class="menu-item-info">
+              <h3>Indian Fish and Chips</h3>
+              <p>A fusion of traditional Indian spices with the classic British dish.</p>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-image-container">
+              <img class="menu-item-image" src="restaurant-pictures/full-english.jpg" alt="Full English Breakfast">
+            </div>
+            <div class="menu-item-info">
+              <h3>Full English Breakfast</h3>
+              <p>A hearty breakfast featuring eggs, sausages, beans, and toast.</p>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-image-container">
+              <img class="menu-item-image" src="restaurant-pictures/french-toast.jpg" alt="French Toast">
+            </div>
+            <div class="menu-item-info">
+              <h3>French Toast</h3>
+              <p>A delicious twist on the classic breakfast dish.</p>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-image-container">
+              <img class="menu-item-image" src="restaurant-pictures/beef-short-ribs.jpg" alt="Beef Short Ribs">
+            </div>
+            <div class="menu-item-info">
+              <h3>Beef Short Ribs</h3>
+              <p>A rich and flavorful dish featuring slow-cooked beef short ribs.</p>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-image-container">
+              <img class="menu-item-image" src="restaurant-pictures/dynamite-shrimp.jpg" alt="Dynamite Shrimp">
+            </div>
+            <div class="menu-item-info">
+              <h3>Dynamite Shrimp</h3>
+              <p>A spicy and flavorful dish featuring crispy shrimp in a fiery sauce.</p>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-image-container">
+              <img class="menu-item-image" src="restaurant-pictures/raspberry-lemonade.jpg" alt="Raspberry Lemonade">
+            </div>
+            <div class="menu-item-info">
+              <h3>Raspberry Lemonade</h3>
+              <p>A refreshing drink featuring the tart sweetness of raspberries and the zesty kick of lemon.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-text">
+          <h2>About Vienna Bistro</h2>
+          <p>Welcome to Vienna Bistro, where fresh ingredients, delicious food, and a warm atmosphere come together. Whether you're joining us for breakfast, lunch, or dinner, we're committed to serving quality dishes and making every visit enjoyable.</p>
+        </div>
+
+        <img class="about-image" src="restaurant-pictures/about-image.jpg" alt="Vienna Bistro Interior">
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2>Reserve a Table</h2>
+        <p>Complete the form below to reserve a table at Vienna Bistro.</p>
+
+        <form class="reservation-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Number of guests</label>
+            <input id="guests" name="guests" type="number" min="1" max="12" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Special requests</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <button type="submit">Request Reservation</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-menu">
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>024 1234 5678</p>
+        </div>
+        <nav aria-label="Footer Navigation">
+          <h3>Navigation</h3>
+          <ul class="footer-nav">
+            <li><a class="nav-item" href="#home">Home</a></li>
+            <li><a class="nav-item" href="#menu">Menu</a></li>
+            <li><a class="nav-item" href="#about">About</a></li>
+            <li><a class="nav-item" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <img class="footer-logo" src="restaurant-pictures/vienna-logo.png" alt="Vienna Bistro Logo">
+
+      <p class="footer-text">© 2026 Vienna Bistro. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

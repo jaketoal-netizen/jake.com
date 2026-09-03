@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus BJJ</title>
+    <link rel="stylesheet" href="styles-bjj/header.css">
+    <link rel="stylesheet" href="styles-bjj/main.css">
+    <link rel="stylesheet" href="styles-bjj/footer.css">
+    <link rel="stylesheet" href="styles-bjj/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="#home" aria-label="Focus BJJ home">
+          <img class="logo" src="pictures-bjj/focus-logo.jpeg" alt="">
+        </a>
+      <span class="header-title">FOCUS BJJ</span>
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="main-navigation"
+                aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+          <a class="nav-item" href="#home">Home</a>
+          <a class="nav-item" href="#about">About</a>
+          <a class="nav-item" href="#timetable">Timetable</a>
+          <a class="nav-item" href="#contact">Contact</a>
+          <a class="nav-item" href="#faqs">FAQs</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-container">
+          <img class="hero-image" 
+               src="pictures-bjj/hero-picture.avif" 
+               alt="Focus BJJ"
+               >
+          <div class="hero-content">
+             <h1>
+                <span>FOCUS ON THE FIGHT.</span>
+                <span class="accent">GROW ON THE MAT.</span>
+            </h1>
+            <p class="hero-description">Expert Brazilian Jiu-Jitsu coaching in a welcoming environment for complete beginners and experienced grapplers.</p>
+          <span class="hero-cta">Book a Free Trial</span>
+          </div>
+        </div>
+         
+      </section>
+      <section id="about" class="about">
+        <div class="about-container">
+        <h2>ABOUT US</h2>
+            <p class="about-intro">Since <strong>2010</strong>, we have provided high-quality Brazilian Jiu-Jitsu training in a supportive and inclusive environment.</p>
+        <h3>OUR PHILOSOPHY</h3>
+            <p class="about-philosophy">Every class at Focus BJJ combines clear technical instruction, focused drilling and live rounds that help students apply what they have learned. Beginners build strong fundamentals at their own pace, while experienced grapplers receive the detail and individual feedback needed to keep progressing.</p>
+        <h3>OUR COACHES</h3>
+          <div class="coach-layout">
+            <figure class="coach-profile">
+              <img src="pictures-bjj/head coach.jpg"
+                   alt="Rickson Tavares wearing a blue Brazilian Jiu-Jitsu gi"
+                   class="coach-image">
+              <figcaption>
+                <strong>Rickson Tavares</strong>
+                <span>Head Coach</span>
+              </figcaption>
+            </figure>
+
+            <div class="coach-content">
+              <p>Led by Head Coach Rickson Tavares, every session is built around clear instruction, careful attention to technique and a safe training environment. Rickson works closely with students at every level, helping beginners gain confidence while challenging experienced grapplers to sharpen the details of their game.</p>
+              <span class="about-cta">Start Your Journey</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="timetable" class="timetable"></section>
+      <section id="contact" class="contact"></section>
+      <section id="faqs" class="faqs"></section>
+    </main>
+    <footer>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mainNavigation = document.querySelector('.main-nav');
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+        mainNavigation.classList.toggle('is-open');
+      });
+
+      mainNavigation.addEventListener('click', (event) => {
+        if (event.target.matches('a')) {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Open navigation menu');
+          mainNavigation.classList.remove('is-open');
+        }
+      });
+    </script>
+  </body>
+</html>

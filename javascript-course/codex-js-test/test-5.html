@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Coding Test 5</title>
+  </head>
+  <body>
+    <h1>JavaScript Coding Test 5</h1>
+    <p>Complete each TODO and use the browser console to check your work.</p>
+
+    <script>
+      // Rules:
+      // 1. Write your code only in the TODO sections.
+      // 2. Do not change the supplied test inputs or expected results.
+      // 3. Try to complete the test without looking at previous answers.
+
+
+      // ------------------------------------------------------------
+      // Task 1: Ternary operator
+      // Create a function named getTicketType that accepts an age.
+      // Using a ternary operator, return 'Child' when age is below 16.
+      // Otherwise, return 'Adult'.
+
+      // TODO: Write Task 1 here.
+      function getTicketType(age) {
+        return age < 16 ? 'Child' : 'Adult';
+      }
+      // Uncomment these when your function is ready:
+       console.log(getTicketType(12)); // Expected: Child
+       console.log(getTicketType(16)); // Expected: Adult
+       console.log(getTicketType(30)); // Expected: Adult
+
+
+      // ------------------------------------------------------------
+      // Task 2: Truthy, falsy, and NOT
+      // Create a function named isBasketEmpty that accepts itemCount.
+      // Return true when itemCount is falsy and false when it is truthy.
+      // Use the NOT operator (!).
+
+      // TODO: Write Task 2 here.
+      function isBasketEmpty(itemCount) {
+        if (!itemCount) {
+          return true;
+        } 
+          return false;
+      }
+      // Uncomment these when your function is ready:
+       console.log(isBasketEmpty(0)); // Expected: true
+       console.log(isBasketEmpty(3)); // Expected: false
+       console.log(isBasketEmpty());  // Expected: true
+
+
+      // ------------------------------------------------------------
+      // Task 3: Fallback value with OR
+      // Create a function named getDisplayName that accepts a username.
+      // Return the supplied username when it is truthy.
+      // Otherwise, return 'Guest'. Use the OR operator (||).
+
+      // TODO: Write Task 3 here.
+      function getDisplayName(username) {
+        return username || 'Guest';
+      }
+      // Uncomment these when your function is ready:
+       console.log(getDisplayName('Jake')); // Expected: Jake
+       console.log(getDisplayName(''));     // Expected: Guest
+       console.log(getDisplayName());       // Expected: Guest
+
+
+      // ------------------------------------------------------------
+      // Task 4: String property and method
+      // Create a function named analyseCity that accepts a city string.
+      // Return an object with these two properties:
+      // - characterCount: the length of the city string
+      // - lowercase: the city string converted to lowercase
+
+      // TODO: Write Task 4 here.
+      function analyseCity(city) {
+        return {
+          characterCount: city.length,
+          lowercase: city.toLowerCase()
+      };
+}
+ 
+      // Uncomment these when your function is ready:
+       const cityResult = analyseCity('LONDON');
+       console.log(cityResult.characterCount); // Expected: 6
+       console.log(cityResult.lowercase);       // Expected: london
+
+
+      // ------------------------------------------------------------
+      // Task 5: Nested objects and bracket notation
+      // The restaurant object is supplied below.
+      // Log 'Open late' using bracket notation.
+      // Then log 4.6 from inside the nested reviews object.
+
+      const restaurant = {
+        name: 'The Green Fork',
+        'opening-note': 'Open late',
+        reviews: {
+          rating: 4.6,
+          count: 82
+        }
+      };
+
+      // TODO: Write the two console.log calls for Task 5 here.
+      console.log(restaurant['opening-note']);
+      console.log(restaurant['reviews']['rating']);
+
+      // ------------------------------------------------------------
+      // Task 6: Object destructuring
+      // The course object is supplied below.
+      // Use object destructuring to create variables named subject and lessons.
+      // Then log both variables.
+
+      const course = {
+        subject: 'JavaScript',
+        lessons: 12,
+        completed: false
+      };
+
+      // TODO: Write Task 6 here.
+      const {subject, lessons} = course;
+      // Expected console results:
+      // JavaScript
+      // 12
+      console.log(subject);
+      console.log(lessons);
+
+      // ------------------------------------------------------------
+      // Task 7: Add, change, and delete object properties
+      // The profile object is supplied below.
+      // Add a property named isVerified with the value true.
+      // Change the username to 'jake_codes'.
+      // Delete the temporaryPassword property.
+
+      const profile = {
+        username: 'jake123',
+        temporaryPassword: 'change-me'
+      };
+
+     
+
+      // TODO: Write Task 7 here.
+      profile.isVerified = true;
+      profile.username = 'jake_codes';
+      delete profile.temporaryPassword;
+      // Uncomment these when your changes are ready:
+       console.log(profile.username);                  // Expected: jake_codes
+       console.log(profile.isVerified);                // Expected: true
+       console.log(profile.temporaryPassword);         // Expected: undefined
+       console.log('temporaryPassword' in profile);    // Expected: false
+
+
+      // ------------------------------------------------------------
+      // Task 8: JSON conversion
+      // The preferences object is supplied below.
+      // Convert it into JSON text and store the result in preferencesJSON.
+      // Convert that JSON text back into an object and store it in
+      // restoredPreferences.
+
+      const preferences = {
+        colourScheme: 'light',
+        fontSize: 18
+      };
+
+      // TODO: Write Task 8 here.
+      const preferencesJSON = JSON.stringify(preferences);
+
+      const restoredPreferences = JSON.parse(preferencesJSON);
+      // Uncomment these when your variables are ready:
+       console.log(typeof preferencesJSON);              // Expected: string
+       console.log(restoredPreferences.colourScheme);    // Expected: light
+      console.log(restoredPreferences.fontSize);        // Expected: 18
+
+
+      // ------------------------------------------------------------
+      // Task 9: Object shorthand and a method
+      // The variables below are supplied.
+      // Create an object named player using property shorthand so it contains
+      // the supplied name and score.
+      // Add a method named getSummary that returns 'Maya scored 75 points'.
+      // The method must use this.name and this.score.
+
+      const name = 'Maya';
+      const score = 75;
+
+      // TODO: Write Task 9 here.
+      const player = {
+        name,
+        score,
+        getSummary() {
+          return `${this.name} scored ${this.score} points`;
+        }
+      };
+
+      // Uncomment these when your object is ready:
+      console.log(player.name);         // Expected: Maya
+      console.log(player.score);        // Expected: 75
+      console.log(player.getSummary()); // Expected: Maya scored 75 points
+
+
+      // ------------------------------------------------------------
+      // Bonus: Random choice
+      // Create a function named spinResult.
+      // Generate one random number and store it in a variable.
+      // Return 'Win' when the number is below 0.25.
+      // Otherwise, return 'Try again'.
+      // Use a ternary operator for the returned value.
+
+      // TODO: Write the Bonus Task here.
+      let randomNumber = Math.random();
+
+      function spinResult() {
+        return randomNumber < 0.25 ? 'Win' : 'Try again';
+      }
+      // Uncomment this when your function is ready:
+       console.log(spinResult()); // Expected: Win or Try again
+    </script>
+  </body>
+</html>

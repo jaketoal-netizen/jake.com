@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+.nav-item:focus-visible,
+.reservation-form input:focus-visible,
+.reservation-form textarea:focus-visible,
+.reservation-form button:focus-visible {
+  outline: 3px solid rgb(161, 79, 52);
+  outline-offset: 3px;
+}

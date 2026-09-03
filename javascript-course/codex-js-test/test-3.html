@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Coding Test 3</title>
+  </head>
+  <body>
+    <h1>JavaScript Coding Test 3</h1>
+    <p>Complete each TODO and use the browser console to check your work.</p>
+
+    <script>
+      // Rules:
+      // 1. Write your code only in the TODO sections.
+      // 2. Do not change the supplied test inputs or expected results.
+      // 3. Do not look at your previous answer sheets while working.
+
+
+      // ------------------------------------------------------------
+      // Task 1: Update a variable
+      // Create a let variable named lives and give it the value 3.
+      // Subtract 1 from lives using the variable's current value.
+      // Log lives. Expected: 2
+
+      // TODO: Write Task 1 here.
+
+      let lives = 3;
+      lives -= 1;
+      console.log(lives);
+      // ------------------------------------------------------------
+      // Task 2: Compare two values
+      // Create a function named getLargerNumber that accepts num1 and num2.
+      // Return num1 if num1 is greater than num2.
+      // Otherwise, return num2.
+
+      // TODO: Write Task 2 here.
+      function getLargerNumber(num1, num2) {
+        if (num1 > num2) {
+          return num1;
+        } else {
+          return num2;
+        }
+      }
+      // Uncomment these when your function is ready:
+       console.log(getLargerNumber(8, 3));  // Expected: 8
+       console.log(getLargerNumber(4, 10)); // Expected: 10
+       console.log(getLargerNumber(6, 6));  // Expected: 6
+
+
+      // ------------------------------------------------------------
+      // Task 3: Multiple conditions
+      // Create a function named canUseDiscount that accepts cartTotal
+      // and hasDiscountCode.
+      // Return true only when the cart total is at least £40 AND the customer
+      // has a discount code. Otherwise, return false.
+
+      // TODO: Write Task 3 here.
+      function canUseDiscount(cartTotal, hasDiscountCode) {
+        if (cartTotal >= 40 && hasDiscountCode) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      // Uncomment these when your function is ready:
+       console.log(canUseDiscount(50, true));  // Expected: true
+       console.log(canUseDiscount(30, true));  // Expected: false
+       console.log(canUseDiscount(50, false)); // Expected: false
+
+
+      // ------------------------------------------------------------
+      // Task 4: Default text parameter
+      // Create a function named sendMessage that accepts name and message.
+      // Give message a default value of 'Hello'.
+      // Return a string in this format: 'Hello, Sam'
+      // The supplied message should replace Hello when one is provided.
+
+      // TODO: Write Task 4 here.
+      function sendMessage(name, message = 'Hello') {
+        return(`${message}, ${name}`);
+      }
+      // Uncomment these when your function is ready:
+       console.log(sendMessage('Sam'));            // Expected: Hello, Sam
+       console.log(sendMessage('Mia', 'Goodbye')); // Expected: Goodbye, Mia
+
+
+      // ------------------------------------------------------------
+      // Task 5: Price category
+      // Create a function named getPriceCategory that accepts a price.
+      // Return:
+      // - 'Budget' for prices below 20
+      // - 'Standard' for prices from 20 up to and including 50
+      // - 'Premium' for prices above 50
+
+      // Pay attention to the boundary values 20 and 50.
+
+      // TODO: Write Task 5 here.
+      function getPriceCategory(price) {
+        if (price < 20) {
+          return 'Budget';
+        } else if (price >= 20 && price <= 50) {
+          return 'Standard';
+        } else {
+          return 'Premium';
+        }
+      }
+      // Uncomment these when your function is ready:
+       console.log(getPriceCategory(19)); // Expected: Budget
+       console.log(getPriceCategory(20)); // Expected: Standard
+       console.log(getPriceCategory(50)); // Expected: Standard
+       console.log(getPriceCategory(51)); // Expected: Premium
+
+
+      // ------------------------------------------------------------
+      // Task 6: Build and use an object
+      // Create an object named game with these properties:
+      // title: 'Space Quest'
+      // price: 30
+      // isMultiplayer: false
+      // Add a method named getInfo that RETURNS a string using the object's
+      // title and price: 'Space Quest costs £30'
+
+      // TODO: Write Task 6 here.
+      let game = {
+        title: 'Space Quest',
+        price: 30,
+        isMultiplayer: false,
+
+        getInfo() {
+          return(`${this.title} costs £${this.price}`)
+        }
+      }
+      // Uncomment these when your object is ready:
+       console.log(game.title);         // Expected: Space Quest
+       console.log(game.isMultiplayer); // Expected: false
+       console.log(game.getInfo());     // Expected: Space Quest costs £30
+
+
+      // ------------------------------------------------------------
+      // Task 7: Modify an object through a function
+      // The user object is supplied below.
+      // Create a function named levelUp that accepts a player object.
+      // Add 1 to the object's level, then return the new level.
+
+      const user = {
+        username: 'Jake',
+        level: 4
+      };
+
+      // TODO: Write Task 7 here.
+      function levelUp(user) {
+        return(user.level += 1);
+      }
+      // Uncomment these when your function is ready:
+       console.log(levelUp(user)); // Expected: 5
+       console.log(user.level);    // Expected: 5
+
+
+      // ------------------------------------------------------------
+      // Task 8: Find and fix the bugs
+      // The function below should return 'Access granted' when a user is 18
+      // or older, and 'Access denied' otherwise.
+      // It currently contains two mistakes. Correct them.
+
+      // TODO: Fix this function.
+      function checkAccess(age) {
+        if (age >= 18) {
+          return('Access granted');
+        } else {
+          return('Access denied');
+        }
+      }
+
+      // Uncomment these after fixing the function:
+       console.log(checkAccess(21)); // Expected: Access granted
+       console.log(checkAccess(15)); // Expected: Access denied
+
+
+      // ------------------------------------------------------------
+      // Bonus: Currency conversion
+      // Create a function named convertToPence that accepts pounds and pence.
+      // Give pence a default value of 0.
+      // There are 100 pence in £1.
+      // Return the combined amount as a number of pence.
+
+      // TODO: Write the Bonus Task here.
+      function convertToPence(pounds, pence = 0) {
+        return(pounds * 100 + pence)
+      }
+      // Uncomment these when your function is ready:
+       console.log(convertToPence(5));     // Expected: 500
+       console.log(convertToPence(3, 50)); // Expected: 350
+    </script>
+  </body>
+</html>

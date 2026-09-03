@@ -1,0 +1,216 @@
+main {
+  margin: 0;
+}
+
+/* Hero Section */
+
+.hero-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.35);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: clamp(400px, 40vw, 500px);
+  object-fit: cover;
+}
+
+.hero-content {
+  max-width: 750px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: max(24px, calc((100% - 1000px) / 2));
+  transform: translateY(-50%);
+  color: rgb(237, 237, 237);
+  right: 24px;
+}
+
+.hero-content h1 span {
+  display: block;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1;
+}
+
+.accent {
+  color: #da2d2f;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  line-height: 1.5;
+  margin-top: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.hero-cta {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: 0.1s;
+  display: inline-block;
+}
+
+.hero-cta:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #da2d2f;
+}
+
+.hero-cta:active {
+  opacity: 0.6;
+}
+
+@media (max-width: 700px) {
+  .hero-image {
+    height: clamp(360px, 65vw, 400px);
+  }
+  .hero-content {
+    right: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    right: 16px;
+    left: 16px;
+  }
+}
+
+/* About Section */
+
+.about {
+  background-color: rgb(235, 235, 235);
+}
+
+.about-container {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  max-width: 1000px;
+  padding-inline: 24px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin: auto;
+}
+
+.about-container h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  letter-spacing: 0.08em;
+}
+
+.about-container h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 12px auto 0;
+  background-color: #da2d2f;
+}
+
+.about-container h3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 24px;
+  letter-spacing: 0.04em;
+}
+
+.about-intro,
+.about-philosophy {
+  max-width: 650px;
+  margin-inline: auto;
+}
+
+.coach-profile {
+  margin: 20px 0 24px;
+}
+
+.coach-image {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+.coach-profile figcaption {
+  margin-top: 12px;
+}
+
+.coach-profile figcaption strong,
+.coach-profile figcaption span {
+  display: block;
+}
+
+.coach-profile figcaption strong {
+  font-family: "Antonio", sans-serif;
+  font-size: 1.25em;
+}
+
+.about-cta {
+  color: rgb(255, 255, 255);
+  background-color: #da2d2f;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: 0.1s;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.about-cta:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}
+
+.about-cta:active {
+  opacity: 0.6;
+}
+
+@media (min-width: 850px) {
+  .coach-layout {
+    margin-top: 24px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .coach-profile {
+    flex: 0 1 40%;
+    margin: 0;
+  }
+
+  .coach-image {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+  }
+
+  .coach-content {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding-inline: 16px;
+  }
+}

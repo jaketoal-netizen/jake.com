@@ -1,0 +1,166 @@
+main {
+  background-color:  rgb(255, 244, 219);
+  margin: 0;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.hero-text h2 {
+  margin: 0;
+}
+
+.food-image {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: min(90%, 700px);
+  z-index: 1;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 35%);
+}
+
+.menu-section {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 40px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.menu-heading {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.menu-item-card {
+  width: 300px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.menu-item-image-container {
+  height: 220px;
+  overflow: hidden;
+}
+
+.menu-item-image {
+  display: block;
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item-card:hover .menu-item-image {
+  transform: scale(1.15);
+}
+
+.menu-item-info {
+  padding: 10px;
+}
+
+.about-section {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 80px auto 0;
+  padding: 40px 20px;
+}
+
+.about-text,
+.about-image {
+  width: 50%;
+}
+
+.about-image {
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  height: 400px;
+  display: block;
+}
+
+.about-text h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu-section {
+    grid-template-columns: 300px 300px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu-section {
+    grid-template-columns: 300px;
+  }
+}
+
+
+/* Contact Section */
+
+
+.contact-section {
+  max-width: 700px;
+  margin: 80px auto 0;
+  padding: 0 20px 80px;
+}
+
+.reservation-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.reservation-form button {
+  padding: 12px 20px;
+  font: inherit;
+  cursor: pointer;
+}
