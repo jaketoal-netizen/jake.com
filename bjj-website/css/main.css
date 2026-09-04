@@ -79,9 +79,6 @@ main {
   .hero-image {
     height: clamp(360px, 65vw, 400px);
   }
-  .hero-content {
-    right: 24px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -212,5 +209,170 @@ main {
 @media (max-width: 480px) {
   .about-container {
     padding-inline: 16px;
+  }
+}
+
+/* Time Table Section */
+
+.timetable {
+  background-color: rgb(248, 248, 248);
+}
+
+.timetable-container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-inline: 24px;
+  box-sizing: border-box;
+}
+
+.timetable-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.timetable-container h2::after,
+.timetable-container h2::before {
+  content: "";
+  width: 48px;
+  height: 3px;
+  background-color: #da2d2f;
+}
+
+.timetable-container p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.timetable-table {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 8px;
+}
+
+.timetable-container table {
+  min-width: 545px;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  border-bottom: 2px solid rgb(227, 227, 227);
+}
+
+.day-column {
+  width: 22%;
+}
+
+.time-column {
+  width: 32%;
+}
+
+.class-column {
+  width: 26%;
+}
+
+.level-column {
+  width: 20%;
+}
+
+.timetable-container thead {
+  background-color: #da2d2f;
+  color: rgb(255, 255, 255);
+}
+
+.timetable-container th,
+.timetable-container td {
+  padding: 12px;
+  text-align: left;
+  
+}
+
+.timetable-container tbody tr:nth-child(even) {
+  background-color: rgb(238, 238, 238);
+}
+
+.timetable-container tbody tr:hover {
+  background-color: rgb(205, 205, 205);
+}
+
+.timetable-container tbody tr:last-child td {
+  text-align: center;
+}
+
+.scroll-hint {
+  color: rgb(137, 137, 137);
+  display: none;
+}
+
+.timetable-container h3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 40px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.timetable-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.book-now {
+  color: rgb(255, 255, 255);
+  background-color: #da2d2f;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: 0.1s;
+}
+
+.book-now:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}
+
+.book-now:active {
+  opacity: 0.6;
+}
+
+.memberships {
+  color: rgb(45, 45, 45);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.memberships:hover {
+  text-decoration-color: #da2d2f;
+  color: #da2d2f;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .timetable-container {
+    padding-inline: 16px;
+  }
+
+  .scroll-hint {
+    display: block;
+  }
+
+  .timetable-actions {
+    flex-direction: column;
   }
 }
