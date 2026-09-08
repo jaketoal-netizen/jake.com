@@ -153,7 +153,46 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="contact"></section>
+      <section id="contact" class="contact">
+        <div class="contact-container">
+          <h2>Contact Us</h2>
+            <p class="contact-description">Have a question or ready to start training? Get in touch with us below.</p>
+          <div class="contact-layout">
+          <div class="contact-details">
+          <address>
+            <p>308 Negra Arroyo Lane, Coventry, UK</p>
+            <p>07827159201</p>
+            <p>info@focusbjj.com</p>
+          </address>
+          <div class="opening-hours">
+            <h3>Opening Hours</h3>
+              <p>Monday-Friday: 17:00-21:00</p>
+              <p>Saturday: 09:00-13:00</p>
+              <p>Sunday: Closed</p>
+          </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              </div>
+              
+              <button class="contact-submit" type="submit">Send Message</button>
+          </form>
+          </div>
+        </div>
+
+      </section>
       <section id="faqs" class="faqs"></section>
     </main>
     <footer>
@@ -176,6 +215,12 @@
           menuToggle.setAttribute('aria-label', 'Open navigation menu');
           mainNavigation.classList.remove('is-open');
         }
+      });
+
+      const contactForm = document.querySelector('.contact-form');
+
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
       });
     </script>
   </body>
